@@ -1,0 +1,42 @@
+﻿<Window x:Class="WpfAppPoE3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="10">
+            <TextBlock Text="Filter Recipes" FontWeight="Bold" Margin="0,0,0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Ingredient:" Width="100"/>
+                <TextBox Name="IngredientFilterTextBox" Width="200"/>
+                <Button Content="Filter" Width="100" Click="FilterRecipes_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                <TextBlock Text="Food Group:" Width="100"/>
+                <TextBox Name="FoodGroupFilterTextBox" Width="200"/>
+                <Button Content="Filter" Width="100" Click="FilterRecipes_Click"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <TextBlock Text="Max Calories:" Width="100"/>
+                <TextBox Name="CaloriesFilterTextBox" Width="200"/>
+                <Button Content="Filter" Width="100" Click="FilterRecipes_Click"/>
+            </StackPanel>
+
+            <Button Content="Clear Filters" Width="100" Click="ClearFilters_Click"/>
+
+            <ListBox Name="RecipeListBox" Width="760" Height="200" Margin="0,10" SelectionChanged="RecipeListBox_SelectionChanged"
+         DisplayMemberPath="Name"/>
+
+            <TextBlock Name="RecipeDetailsTextBlock" TextWrapping="Wrap" Margin="0,10"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <Button Content="Add Recipe" Width="100" Margin="5" Click="AddRecipeButton_Click"/>
+                <Button Content="Scale Recipe" Width="100" Margin="5" Click="ScaleRecipeButton_Click"/>
+                <Button Content="Reset Quantities" Width="130" Margin="5" Click="ResetRecipeButton_Click"/>
+                <Button Content="Clear Recipes" Width="100" Margin="5" Click="ClearRecipeButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

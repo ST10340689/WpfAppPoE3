@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfAppPoE3.AddIngredientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Ingredient" Height="300" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Ingredient Name:"/>
+            <TextBox Name="IngredientNameTextBox" Width="200" Margin="5"/>
+
+            <TextBlock Text="Quantity:"/>
+            <TextBox Name="QuantityTextBox" Width="200" Margin="5"/>
+
+            <TextBlock Text="Unit:"/>
+            <TextBox Name="UnitTextBox" Width="200" Margin="5"/>
+
+            <TextBlock Text="Calories:"/>
+            <TextBox Name="CaloriesTextBox" Width="200" Margin="5"/>
+
+            <TextBlock Text="Food Group:"/>
+            <TextBox Name="FoodGroupTextBox" Width="200" Margin="5"/>
+
+            <Button Name="AddIngredientButton" Content="Add Ingredient" Width="150" Margin="5" Click="AddIngredientButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
